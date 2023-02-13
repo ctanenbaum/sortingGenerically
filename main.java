@@ -2,6 +2,9 @@ package sortingGenerically;
 
 import java.util.*;
 
+/*
+    Looks great.. Need comments at all junctures -8%. :   92% 
+*/
 
 public class main {
 
