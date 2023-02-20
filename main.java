@@ -7,7 +7,7 @@ import java.util.*;
 */
 
 public class main {
-
+          //created 3 different datatype arrays to compare
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		String[] shoeType = new String[5];
@@ -17,6 +17,7 @@ public class main {
 		String type;
 		int modelNum;
 		double price;
+		//asked the user for input and added it to each array
 		for(int i = 0; i < shoeType.length; i++) {
 			System.out.println("Enter Type of Shoe");
 			type = input.nextLine();
@@ -30,24 +31,27 @@ public class main {
 			shoePrice[i] = price;
 
 		}
+		//printed before calling any sort method
 		System.out.println("\nShoes Unsorted:");
 		for (String i : shoeType) {
 			System.out.println(i);
 		}
-		
+		//instanciated the merge sort class
 		mergeSort<String> mergeShoe = new mergeSort<String>();
+		//use the merge sort to compare the data in the array
 		mergeShoe.mergeSort(0, shoeType.length - 1, shoeType);
 		
 		System.out.println("\nShoes Sorted by type:");
 		for (String i : shoeType) {
 			System.out.println(i);
 		}
+		//sort for int using the mergeSort class and comparator
 		mergeShoe.mergeSort(0, shoeType.length - 1, shoeModelNum);
 		System.out.println("\nShoes Sorted by Model Number:");
 		for (int i : shoeModelNum) {
 			System.out.println(i);
 		}
-		
+		//sort for double using the mergeSort class and comparator
 		mergeShoe.mergeSort(0, shoeType.length - 1, shoePrice);
 		System.out.println("\nShoes Sorted by Price:");
 		for (double i : shoePrice) {
